@@ -157,9 +157,16 @@
     <Compile Include="Domain\Common\ThrowIf.cs" />
     <Compile Include="Domain\Contracts\Commands\ICommandDispatcher.cs" />
     <Compile Include="Domain\Contracts\Commands\ICommandHandler.cs" />
+    <Compile Include="Domain\Contracts\IStorageContext.cs" />
     <Compile Include="Domain\Contracts\Queries\IQuery.cs" />
     <Compile Include="Domain\Contracts\Queries\IQueryDispatcher.cs" />
     <Compile Include="Domain\Contracts\Queries\QueryHandler.cs" />
+    <Compile Include="Domain\Data\Configurations\BlogConfiguration.cs" />
+    <Compile Include="Domain\Data\Configurations\EntityFrameworkConfiguration.cs" />
+    <Compile Include="Domain\Data\DbEntityValidationException.cs" />
+    <Compile Include="Domain\Data\Extensions\BlogExtensions.cs" />
+    <Compile Include="Domain\Data\Models\Blog.cs" />
+    <Compile Include="Domain\Data\StorageContext.cs" />
     <Compile Include="Domain\Services\Commands\CommandResult.cs" />
     <Compile Include="Domain\Services\Dispatchers\CommandDispatcher.cs" />
     <Compile Include="Domain\Services\Dispatchers\QueryDispatcher.cs" />

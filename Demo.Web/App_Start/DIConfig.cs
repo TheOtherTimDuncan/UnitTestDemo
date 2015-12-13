@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Demo.Web.Domain.Contracts;
 using Demo.Web.Domain.Contracts.Commands;
 using Demo.Web.Domain.Contracts.Queries;
 using Demo.Web.Domain.Services.Dispatchers;
@@ -34,6 +35,8 @@ namespace Demo.Web
 
             container.Register(typeof(ICommandHandler<>), defaultAssemblies);
             container.Register(typeof(IAsyncCommandHandler<>), defaultAssemblies);
+
+            container.Register(typeof(IStorageContext<>), defaultAssemblies, Lifestyle.Scoped);
 
             return container;
         }
