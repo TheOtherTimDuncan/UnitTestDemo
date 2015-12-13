@@ -3,10 +3,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/bootstrap.css")" />
 </head>
 <body>
-    <div>
+    <div class="container">
+        <h2>Unit Test Demo</h2>
         @RenderBody()
     </div>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-2.1.4.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.js")"></script>
 </body>
 </html>
