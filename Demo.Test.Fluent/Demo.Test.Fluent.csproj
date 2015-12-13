@@ -113,6 +113,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommandHandlerTests\BlogModelCommandHandlerTests.cs" />
     <Compile Include="DependencyTests.cs" />
     <Compile Include="EntityTests\BaseEntityTest.cs" />
     <Compile Include="EntityTests\BlogTests.cs" />

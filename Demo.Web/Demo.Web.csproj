@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sections\Common\BaseController.cs" />
+    <Compile Include="Sections\Home\CommandHandlers\BlogCommandHandler.cs" />
     <Compile Include="Sections\Home\HomeController.cs" />
     <Compile Include="Sections\Home\Models\BlogModel.cs" />
     <Compile Include="Sections\Home\Models\PostModel.cs" />
