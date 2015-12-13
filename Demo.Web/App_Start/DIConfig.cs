@@ -5,6 +5,7 @@ using System.Reflection;
 using Demo.Web.Domain.Contracts;
 using Demo.Web.Domain.Contracts.Commands;
 using Demo.Web.Domain.Contracts.Queries;
+using Demo.Web.Domain.Data;
 using Demo.Web.Domain.Services.Dispatchers;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
@@ -36,7 +37,7 @@ namespace Demo.Web
             container.Register(typeof(ICommandHandler<>), defaultAssemblies);
             container.Register(typeof(IAsyncCommandHandler<>), defaultAssemblies);
 
-            container.Register(typeof(IStorageContext<>), defaultAssemblies, Lifestyle.Scoped);
+            container.Register(typeof(IStorageContext<>), typeof(StorageContext<>), Lifestyle.Scoped);
 
             return container;
         }
