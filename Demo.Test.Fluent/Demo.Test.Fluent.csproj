@@ -120,6 +120,7 @@
     <Compile Include="FluentCalculatorTests.cs" />
     <Compile Include="Mocks\MockStorageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryHandlerTests\BlogQueryHandlerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Demo.Web\Demo.Web.csproj">
