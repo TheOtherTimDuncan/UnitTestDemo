@@ -153,10 +153,21 @@
     <Compile Include="App_Start\DIConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ViewEngineConfig.cs" />
+    <Compile Include="Domain\Common\EnumerableHelpers.cs" />
+    <Compile Include="Domain\Common\ThrowIf.cs" />
+    <Compile Include="Domain\Contracts\Commands\ICommandDispatcher.cs" />
+    <Compile Include="Domain\Contracts\Commands\ICommandHandler.cs" />
+    <Compile Include="Domain\Contracts\Queries\IQuery.cs" />
+    <Compile Include="Domain\Contracts\Queries\IQueryDispatcher.cs" />
+    <Compile Include="Domain\Contracts\Queries\QueryHandler.cs" />
+    <Compile Include="Domain\Services\Commands\CommandResult.cs" />
+    <Compile Include="Domain\Services\Dispatchers\CommandDispatcher.cs" />
+    <Compile Include="Domain\Services\Dispatchers\QueryDispatcher.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sections\Common\BaseController.cs" />
     <Compile Include="Sections\Home\HomeController.cs" />
   </ItemGroup>
   <ItemGroup>

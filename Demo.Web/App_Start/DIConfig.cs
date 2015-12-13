@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Demo.Web.Domain.Contracts.Commands;
+using Demo.Web.Domain.Contracts.Queries;
+using Demo.Web.Domain.Services.Dispatchers;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 
@@ -22,6 +25,15 @@ namespace Demo.Web
             }
 
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
+
+            container.Register<ICommandDispatcher, CommandDispatcher>(Lifestyle.Scoped);
+            container.Register<IQueryDispatcher, QueryDispatcher>(Lifestyle.Scoped);
+
+            container.Register(typeof(IQueryHandler<,>), defaultAssemblies);
+            container.Register(typeof(IAsyncQueryHandler<,>), defaultAssemblies);
+
+            container.Register(typeof(ICommandHandler<>), defaultAssemblies);
+            container.Register(typeof(IAsyncCommandHandler<>), defaultAssemblies);
 
             return container;
         }
