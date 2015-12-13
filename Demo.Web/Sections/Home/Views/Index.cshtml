@@ -1,1 +1,24 @@
-﻿Hello, world.
+﻿@model Demo.Web.Sections.Home.Models.BlogModel
+
+<h2>Blog</h2>
+
+@if (Model != null)
+{
+    <form>
+        @Html.HiddenFor(m => m.ID)
+        <section class="form-group">
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, htmlAttributes: new
+            {
+                @class="form-control"
+            })
+        </section>
+        <input type="submit" class="btn btn-primary" value="Save" />
+    </form>
+}
+else
+{
+    <p>No blogs exist.</p>
+}
+
+<a href="" class="btn btn-primary" style="margin-top: 15px;">Add Blog</a>

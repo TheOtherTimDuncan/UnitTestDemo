@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Demo.Web.Domain.Contracts.Commands;
 using Demo.Web.Domain.Contracts.Queries;
 using Demo.Web.Sections.Common;
+using Demo.Web.Sections.Home.Models;
+using Demo.Web.Sections.Home.Queries;
 
 namespace Demo.Web.Sections.Home
 {
@@ -19,9 +22,10 @@ namespace Demo.Web.Sections.Home
         }
 
         [Route("~/")]
-        public ActionResult Index()
+        public async Task<ActionResult> Index(BlogQuery query)
         {
-            return View();
+            BlogModel model = await QueryDispatcher.DispatchAsync(query);
+            return View(model);
         }
     }
 }
