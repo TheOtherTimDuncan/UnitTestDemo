@@ -12,8 +12,7 @@ namespace Demo.Test.MsTest
             [TestMethod]
             public void ReturnsSumOfGivenValues()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Add(1, 2, 3);
+                int result = new Calculator().Add(1, 2, 3);
                 Assert.AreEqual(6, result, "that's how math works");
             }
 
@@ -21,16 +20,14 @@ namespace Demo.Test.MsTest
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfNoValuesGiven()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Add();
+                int result = new Calculator().Add();
             }
 
             [TestMethod]
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfOnlyOneValueGiven()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Add(1);
+                int result = new Calculator().Add(1);
             }
         }
 
@@ -40,8 +37,7 @@ namespace Demo.Test.MsTest
             [TestMethod]
             public void ReturnsResultOfValuesSubtractedFromEachOther()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Subtract(3, 2, 1);
+                int result = new Calculator().Subtract(3, 2, 1);
                 Assert.AreEqual(0, result, "that's how math works");
             }
 
@@ -49,16 +45,14 @@ namespace Demo.Test.MsTest
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfNoValuesGiven()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Subtract();
+                int result = new Calculator().Subtract();
             }
 
             [TestMethod]
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfOnlyOneValueGiven()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Subtract(1);
+                int result = new Calculator().Subtract(1);
             }
         }
 
@@ -68,8 +62,7 @@ namespace Demo.Test.MsTest
             [TestMethod]
             public void ReturnsResultOfValuesMultipliedTogether()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Multiply(2, 3, 4);
+                int result = new Calculator().Multiply(2, 3, 4);
                 //Assert.AreEqual(12, result, "that's how math works");
                 Assert.AreEqual(24, result, "that's how math works");
             }
@@ -78,16 +71,14 @@ namespace Demo.Test.MsTest
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfNoValuesGiven()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Multiply();
+                int result = new Calculator().Multiply();
             }
 
             [TestMethod]
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfOnlyOneValueGiven()
             {
-                Calculator calculator = new Calculator();
-                int result = calculator.Multiply(1);
+                int result = new Calculator().Multiply(1);
             }
         }
 
@@ -97,8 +88,7 @@ namespace Demo.Test.MsTest
             [TestMethod]
             public void ReturnsResultOfValuesDividedAgainstEach()
             {
-                Calculator calculator = new Calculator();
-                decimal result = calculator.Divide(24, 4, 2);
+                decimal result = new Calculator().Divide(24, 4, 2);
                 Assert.AreEqual(3, result, "that's how math works");
             }
 
@@ -106,16 +96,14 @@ namespace Demo.Test.MsTest
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfNoValuesGiven()
             {
-                Calculator calculator = new Calculator();
-                decimal result = calculator.Divide();
+                decimal result = new Calculator().Divide();
             }
 
             [TestMethod]
             [ExpectedException(typeof(ArgumentOutOfRangeException))]
             public void ThrowsExceptionIfOnlyOneValueGiven()
             {
-                Calculator calculator = new Calculator();
-                decimal result = calculator.Divide(1);
+                decimal result = new Calculator().Divide(1);
             }
         }
     }
