@@ -163,9 +163,11 @@
     <Compile Include="Domain\Contracts\Queries\QueryHandler.cs" />
     <Compile Include="Domain\Data\Configurations\BlogConfiguration.cs" />
     <Compile Include="Domain\Data\Configurations\EntityFrameworkConfiguration.cs" />
+    <Compile Include="Domain\Data\Configurations\PostConfiguration.cs" />
     <Compile Include="Domain\Data\DbEntityValidationException.cs" />
     <Compile Include="Domain\Data\Extensions\BlogExtensions.cs" />
     <Compile Include="Domain\Data\Models\Blog.cs" />
+    <Compile Include="Domain\Data\Models\Post.cs" />
     <Compile Include="Domain\Data\StorageContext.cs" />
     <Compile Include="Domain\Services\Commands\CommandResult.cs" />
     <Compile Include="Domain\Services\Dispatchers\CommandDispatcher.cs" />

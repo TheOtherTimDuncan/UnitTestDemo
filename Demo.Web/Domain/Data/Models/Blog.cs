@@ -16,6 +16,8 @@ namespace Demo.Web.Domain.Data.Models
             ThrowIf.Argument.IsNullOrEmpty(name, "name");
 
             this.Name = name;
+
+            this.Posts = new List<Post>();
         }
 
         public int ID
@@ -28,6 +30,18 @@ namespace Demo.Web.Domain.Data.Models
         {
             get;
             set;
+        }
+
+        public virtual ICollection<Post> Posts
+        {
+            get; private set;
+        }
+
+        public Post AddPost(string title)
+        {
+            Post post = new Post(this, title);
+            Posts.Add(post);
+            return post;
         }
     }
 }

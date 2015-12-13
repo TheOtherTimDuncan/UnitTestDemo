@@ -6,16 +6,18 @@ using Demo.Web.Domain.Data.Models;
 
 namespace Demo.Web.Domain.Data.Configurations
 {
-    public class BlogConfiguration : EntityTypeConfiguration<Blog>
+    public class PostConfiguration : EntityTypeConfiguration<Post>
     {
-        public BlogConfiguration()
+        public PostConfiguration()
         {
-            HasKey(x => x.ID);
-
-            HasMany(x => x.Posts).WithRequired(x => x.Blog).HasForeignKey(x => x.BlogID).WillCascadeOnDelete();
+            HasKey(x => new
+            {
+                x.ID,
+                x.BlogID
+            });
 
             Property(x => x.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.Name).HasMaxLength(50).IsRequired().IsUnicode();
+            Property(x => x.Title).HasMaxLength(100).IsRequired().IsUnicode();
         }
     }
 }
