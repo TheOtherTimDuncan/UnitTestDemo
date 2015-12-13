@@ -118,6 +118,7 @@
     <Compile Include="EntityTests\BlogTests.cs" />
     <Compile Include="EntityTests\EntityTestHelper.cs" />
     <Compile Include="FluentCalculatorTests.cs" />
+    <Compile Include="Mocks\MockStorageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
