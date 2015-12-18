@@ -73,6 +73,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -114,11 +115,15 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CommandHandlerTests\BlogModelCommandHandlerTests.cs" />
+    <Compile Include="ControllerTests\TestHelpers\ControllerTester.cs" />
+    <Compile Include="ControllerTests\TestHelpers\RedirectToRouteResultTester.cs" />
+    <Compile Include="ControllerTests\TestHelpers\ViewResultTester.cs" />
     <Compile Include="DependencyTests.cs" />
     <Compile Include="EntityTests\BaseEntityTest.cs" />
     <Compile Include="EntityTests\BlogTests.cs" />
     <Compile Include="EntityTests\EntityTestHelper.cs" />
     <Compile Include="FluentCalculatorTests.cs" />
+    <Compile Include="Mocks\MockHttpContext.cs" />
     <Compile Include="Mocks\MockStorageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryHandlerTests\BlogQueryHandlerTests.cs" />
