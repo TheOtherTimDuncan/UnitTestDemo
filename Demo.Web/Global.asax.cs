@@ -16,6 +16,7 @@ namespace Demo.Web
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
 
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ValidationConfig.ConfigureValidation(container);
             ViewEngineConfig.ConfigureViewEngines(ViewEngines.Engines);
         }
     }
