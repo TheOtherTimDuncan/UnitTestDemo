@@ -191,6 +191,7 @@
     <Compile Include="Sections\Home\HomeController.cs" />
     <Compile Include="Sections\Home\Models\BlogModel.cs" />
     <Compile Include="Sections\Home\Models\PostModel.cs" />
+    <Compile Include="Sections\Home\ModelValidators.cs" />
     <Compile Include="Sections\Home\Queries\BlogQuery.cs" />
     <Compile Include="Sections\Home\QueryHandlers\BlogQueryHandler.cs" />
   </ItemGroup>

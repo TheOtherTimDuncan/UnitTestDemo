@@ -7,6 +7,7 @@ using Demo.Web.Domain.Contracts.Commands;
 using Demo.Web.Domain.Contracts.Queries;
 using Demo.Web.Domain.Data;
 using Demo.Web.Domain.Services.Dispatchers;
+using FluentValidation;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 
@@ -38,6 +39,8 @@ namespace Demo.Web
             container.Register(typeof(IAsyncCommandHandler<>), defaultAssemblies);
 
             container.Register(typeof(IStorageContext<>), typeof(StorageContext<>), Lifestyle.Scoped);
+
+            container.Register(typeof(IValidator<>), defaultAssemblies);
 
             return container;
         }
